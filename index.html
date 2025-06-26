@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- link css -->
+    <link rel="stylesheet" href="css/index.css" />
+    <!-- link icons  -->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <!-- google fonts -->
+     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+    <title>Mahmoud Awad | Front-End</title>
+    
+  </head>
+  <body>
+    <div class="container_body">
+      <header>
+        <div class="container">
+          <div class="logo">
+            <a href="index.html">
+              <i class="fa fa-code" aria-hidden="true"></i>
+              <span>mahmoud awad</span>
+            </a>
+          </div>
+          <div class="links">
+            <ul>
+              <li><a href="pages/about.html">About</a></li>
+              <li><a href="pages/contact.html">Contact</a></li>
+              <li><a href="pages/projects.html">Projects</a></li>
+            </ul>
+          </div>
+                <!-- زر المينيو -->
+             <div class="menu-toggle">
+  <i class="fa fa-bars open-icon"></i>
+  <i class="fa fa-times close-icon"></i>
+              </div>
+
+
+        </div>
+      </header>
+      <main>
+        <div class="container">
+          <div class="hero">
+            <div class="content" >
+              <h1>Mahmoud Awad</h1>
+              <p>
+                Front-end developer with a passion for creating beautiful and
+                functional web experiences.
+              </p>
+              <div class="skills">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JS</span>
+                <span>ui design</span>
+              </div>
+            </div>
+            <div class="image" >
+              <!-- <img src="image/awad.png" alt="my image" /> -->
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer>
+        <div class="container">
+          <div class="social">
+            
+              <a  href="https://www.facebook.com/Awad.Coding" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+              <a  href="https://www.linkedin.com/in/mahmoudawad11/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+              <a  href="https://github.com/AwadCoding" target="_blank"><i class="fa-brands fa-github"></i></a>
+            </div>
+          <div class="copyright">
+            <p>&copy; 2025 Mahmoud Awad. All rights reserved.</p>
+          </div>
+      </footer>
+    </div>
+    <script>
+  const toggleBtn = document.querySelector('header .container .menu-toggle');
+  const header = document.querySelector('header');
+
+  toggleBtn.addEventListener('click', () => {
+    header.classList.toggle('active');
+  });
+</script>
+
+  </body>
+</html>
