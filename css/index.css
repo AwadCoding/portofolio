@@ -109,7 +109,7 @@ main .hero{
 main .hero .image {
    width: 35vw;
     height: 100vh;
-    background-image: url(/image/awad.png);
+    background-image: url(../image/awad.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
