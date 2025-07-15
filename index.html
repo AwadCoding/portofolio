@@ -1,88 +1,323 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <!-- link css -->
-    <link rel="stylesheet" href="css/index.css" />
-    <!-- link icons  -->
-    <link rel="stylesheet" href="css/all.min.css" />
-    <!-- google fonts -->
-     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 
-    <title>Mahmoud Awad | Front-End</title>
-    
-  </head>
-  <body>
-    <div class="container_body">
-      <header>
-        <div class="container">
-          <div class="logo">
-            <a href="index.html">
-              <i class="fa fa-code" aria-hidden="true"></i>
-              <span>mahmoud awad</span>
-            </a>
-          </div>
-          <div class="links">
-            <ul>
-              <li><a href="pages/about.html">About</a></li>
-              <li><a href="pages/contact.html">Contact</a></li>
-              <li><a href="pages/projects.html">Projects</a></li>
-            </ul>
-          </div>
-                <!-- زر المينيو -->
-             <div class="menu-toggle">
-  <i class="fa fa-bars open-icon"></i>
-  <i class="fa fa-times close-icon"></i>
-              </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mahmoud Awad | Front-End Developer</title>
+  
+   <!-- Primary Meta Tags -->
+  <meta name="title" content="Mahmoud Awad | Front-End Developer" />
+  <meta name="description" content="I'm Mahmoud Awad, a front-end developer crafting modern and responsive websites. Check out my projects, skills, and get in touch." />
+  <meta name="keywords" content="Mahmoud Awad, front-end developer, portfolio, web design, JavaScript, HTML, CSS, responsive websites, React, Cairo developer" />
+  <meta name="author" content="Mahmoud Awad" />
+  <meta name="robots" content="index, follow" />
 
+  <!-- Open Graph / Facebook / WhatsApp -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://awadcoding.github.io/" />
+  <meta property="og:title" content="Mahmoud Awad | Front-End Developer" />
+  <meta property="og:description" content="🚀 Explore Mahmoud Awad’s portfolio – Modern front-end development using HTML, CSS, JavaScript, React and more." />
+  <meta property="og:image" content="https://awadcoding.github.io/portofolio/image/website_Preview.png" />
 
+  <!-- WhatsApp Friendly Preview (uses Open Graph tags) -->
+  <!-- واتساب بياخد بياناته من OG tags تلقائيًا -->
+
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://awadcoding.github.io/" />
+  <meta name="twitter:title" content="Mahmoud Awad | Front-End Developer" />
+  <meta name="twitter:description" content="🚀 Front-end portfolio built with modern tech. Explore projects, tools & contact details." />
+  <meta name="twitter:image" content="https://awadcoding.github.io/portofolio/image/website_Preview.png" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="image/favicon-32x32.png" type="image/png" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap"
+    rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- libary AOS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="images/favicon.png" />
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+
+<body>
+  <header class="header">
+    <nav>
+      <div class="logo">
+        <a href="">
+          <i class="fas fa-code"></i>
+          <span>Mahmoud Awad</span>
+        </a>
+      </div>
+      <ul class="nav-links">
+        <li><a class="active" href="#">Home</a></li>
+        <li><a href="pages/about.html">About</a></li>
+        <li><a href="pages/projects.html">Projects</a></li>
+        <li><a class="btn-header" href="#contact">Contact</a></li>
+      </ul>
+      <div class="menu-toggle_open">
+        <i class="fas fa-bars"></i>
+      </div>
+      <div class="menu-toggle_close">
+        <i class="fas fa-times"></i>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section id="hero">
+      <div class="text_hero" data-aos="fade-right">
+        <h1>Hi, I'm <span class="highlight">Mahmoud Awad</span></h1>
+        <h2 class="highlight_pp">Front-End Web Developer</h2>
+        <p>I build modern, responsive websites that solve real problems.</p>
+        <a href="#projects" class="btn" data-aos="zoom-in">View My Work</a>
+      </div>
+      <div class="image_hero" data-aos="fade-left">
+        <img class="hero-img" src="image/hero.png" alt="Hero Image" />
+        <div class="floating-icons">
+          <img class="icon react" src="https://img.icons8.com/color/96/react-native.png" alt="React" />
+          <img class="icon js" src="https://img.icons8.com/color/96/javascript--v1.png" alt="JavaScript" />
+          <img class="icon notion" src="https://img.icons8.com/color/48/notion--v1.png" alt="notion--v1" />
         </div>
-      </header>
-      <main>
-        <div class="container">
-          <div class="hero">
-            <div class="content" >
-              <h1>Mahmoud Awad</h1>
-              <p>
-                Front-end developer with a passion for creating beautiful and
-                functional web experiences.
-              </p>
-              <div class="skills">
-                <span>HTML</span>
-                <span>CSS</span>
-                <span>JS</span>
-                <span>ui design</span>
-              </div>
+      </div>
+    </section>
+
+    <section id="skills&tools" data-aos="fade-up">
+      <p class="head-section_p">What I Use</p>
+      <h2 class="head-section">Skills & Tools</h2>
+
+      <div class="skills-slider-wrapper">
+        <!-- <h3 class="slider-title">Skills</h3> -->
+        <div class="skills-slider">
+          <div class="skills-track">
+            <div class="skill-card">
+              <img width="48" height="48" src="https://img.icons8.com/color/48/c-plus-plus-logo.png"
+                alt="c-plus-plus-logo" />
+              <h3>C++</h3>
             </div>
-            <div class="image" >
-              <!-- <img src="image/awad.png" alt="my image" /> -->
+            <div class="skill-card">
+              <img width="48" height="48" src="https://img.icons8.com/color/48/html-5--v1.png" alt="html-5--v1" />
+              <h3>HTML5</h3>
             </div>
+            <div class="skill-card">
+              <img width="48" height="48" src="https://img.icons8.com/color/48/css3.png" alt="css3" />
+              <h3>CSS3</h3>
+            </div>
+            <div class="skill-card">
+              <img width="48" height="48" src="https://img.icons8.com/color/48/javascript--v1.png"
+                alt="javascript--v1" />
+              <h3>JavaScript</h3>
+            </div>
+            <div class="skill-card">
+              <img width="48" height="48" src="https://img.icons8.com/color/48/react-native.png" alt="react-native" />
+              <h3>React</h3>
+            </div>
+            <div class="skill-card">
+              <img width="48" height="48" src="https://img.icons8.com/color/48/git.png" alt="git" />
+              <h3>Git</h3>
+            </div>
+            <div class="skill-card">
+              <img width="48" height="48" src="https://img.icons8.com/color/48/sass.png" alt="sass" />
+              <h3>Sass</h3>
+            </div>
+
+            <!-- كرر العناصر لعمل حركة لا نهائية -->
           </div>
         </div>
-      </main>
-      <footer>
-        <div class="container">
-          <div class="social">
-            
-              <a  href="https://www.facebook.com/Awad.Coding" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
-              <a  href="https://www.linkedin.com/in/mahmoudawad11/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
-              <a  href="https://github.com/AwadCoding" target="_blank"><i class="fa-brands fa-github"></i></a>
+      </div>
+
+      <div class="skills-slider-wrapper">
+        <!-- <h3 class="slider-title">Tools</h3> -->
+        <div class="tools-slider">
+          <div class="tools-track">
+            <div class="tool-card">
+              <img width="48" height="48" src="https://img.icons8.com/color/48/notion--v1.png" alt="notion--v1" />
+              <h3>Notion</h3>
             </div>
-          <div class="copyright">
-            <p>&copy; 2025 Mahmoud Awad. All rights reserved.</p>
+            <div class="tool-card">
+              <img width="48" height="48" src="https://img.icons8.com/color/48/figma--v1.png" alt="figma--v1" />
+              <h3>Figma</h3>
+            </div>
+            <div class="tool-card">
+              <img width="48" height="48" src="https://img.icons8.com/color/48/slack-new.png" alt="slack-new" />
+              <h3>Slack</h3>
+            </div>
+            <div class="tool-card">
+              <img width="48" height="48" src="https://img.icons8.com/color/48/visual-studio-code-2019.png"
+                alt="visual-studio-code-2019" />
+              <h3>Vs code</h3>
+            </div>
+            <div class="tool-card">
+              <img width="48" height="48" src="https://img.icons8.com/color/48/github.png" alt="github" />
+              <h3>GitHub</h3>
+            </div>
+            <!-- google stitch -->
+            <div class="tool-card">
+              <img width="64" height="64"
+                src="https://img.icons8.com/external-others-ghozy-muhtarom/64/external-ui-design-thinking-smooth-others-ghozy-muhtarom.png"
+                alt="external-ui-design-thinking-smooth-others-ghozy-muhtarom" />
+              <h3>Stitch AI</h3>
+            </div>
+
+            <!-- كرر العناصر لعمل حركة لا نهائية -->
           </div>
-      </footer>
+        </div>
+      </div>
+    </section>
+    <div class="container" data-aos="fade-up">
+      <section id="about" data-aos="fade-right">
+        <p class="head-section_p">Who I Am</p>
+        <h2 class="head-section">About Me</h2>
+        <div class="container-about">
+          <p>
+            “I'm a front-end web developer with 2 years of hands-on experience
+            building responsive and user-focused websites. Currently studying
+            law at Helwan University, I bring a unique blend of analytical
+            thinking and creative design to every project. Skilled in HTML,
+            CSS, JavaScript, and passionate about crafting intuitive web
+            experiences.”
+          </p>
+          <div class="about-image-left"></div>
+          <div class="about-image-right"></div>
+        </div>
+        <a href="pages/about.html" class="btn">Learn More</a>
+      </section>
     </div>
-    <script>
-  const toggleBtn = document.querySelector('header .container .menu-toggle');
-  const header = document.querySelector('header');
+    <section id="projects" class="scroll-section" data-aos="fade-up">
+      <p class="head-section_p">My Work</p>
+      <h2 class="head-section">Featured Projects</h2>
+      <div class="container-projects">
+        <div class="project-card" data-aos="fade-up">
+          <div class="project-image">
+            <img src="image/project-elkeberawi.png" alt="Project 1" />
+          </div>
+          <div class="project-text">
+            <h3>Elkber awi</h3>
+            <p>
+              This project aims to provide smart care services for the elderly
+              using modern web technologies, offering features such as room
+              monitoring, medication reminders, fall detection, and more.
+            </p>
+            <a target="_blank" class="btn_link" href="https://awadcoding.github.io/Elkebir_awi/"><i
+                class="fas fa-globe"></i> Live Demo</a>
+            |
+            <a target="_blank" class="btn_link" href="https://github.com/AwadCoding/Elkebir_awi"><i
+                class="fab fa-github"></i> GitHub</a>
+          </div>
+        </div>
 
-  toggleBtn.addEventListener('click', () => {
-    header.classList.toggle('active');
-  });
-</script>
+        <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="project-image">
+            <img src="image/project-carrnto.png" alt="Project 2" />
+          </div>
+          <div class="project-text">
+            <h3>Carrnto</h3>
+            <p>
+              A fully responsive multi-page website for a car rental service.
+            </p>
+            <a target="_blank" class="btn_link" href="https://awadcoding.github.io/carrnto/"><i
+                class="fas fa-globe"></i> Live Demo</a>
+            |
+            <a target="_blank" class="btn_link" href="https://github.com/AwadCoding/carrnto"><i
+                class="fab fa-github"></i> GitHub</a>
+          </div>
+        </div>
 
-  </body>
+        <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="project-image">
+            <img src="image/project-shose.png" alt="Project 3" />
+          </div>
+          <div class="project-text">
+            <h3>Shoes Store</h3>
+            <p>
+              A responsive landing page designed for businesses to showcase
+              their products, services, and company info.
+            </p>
+            <a target="_blank" class="btn_link" href="https://awadcoding.github.io/templet-one/"><i
+                class="fas fa-globe"></i> Live Demo</a>
+            |
+            <a target="_blank" class="btn_link" href="https://github.com/AwadCoding/templet-one"><i
+                class="fab fa-github"></i> GitHub</a>
+          </div>
+        </div>
+      </div>
+      <a href="pages/projects.html" class="btn" data-aos="zoom-in">All Projects</a>
+    </section>
+
+    <section id="contact" data-aos="fade-up">
+      <p class="head-section_p">Get in Touch</p>
+      <h2 class="head-section">Contact Me</h2>
+      <div class="container-contact">
+        <div class="contact-right" data-aos="fade-right">
+          <p class="contact-p">
+            Have a question or want to work My? Fill out the form and I'll get
+            back to you as soon as I can.
+          </p>
+          <div class="form">
+            <form id="contact-form" onsubmit="sendMail(event)">
+              <input id="user_name" type="text" placeholder="Your Name" required />
+              <input id="user_email" type="email" placeholder="Your Email" required />
+              <textarea id="message" placeholder="Your Message" required></textarea>
+              <input type="hidden" id="title" value="my Website Contact Message" />
+              <button class="btn" type="submit">Send Message</button>
+            </form>
+          </div>
+        </div>
+        <div class="contact-left" data-aos="fade-left">
+          <p class="contact-p">Contact Information:</p>
+          <div class="contact-s_info">
+            <div class="contact-info">
+              <p>
+                <i class="fas fa-envelope"></i>
+                <a href="mailto:mahmoud.awad.official@gmail.com">mahmoud.awad.official@gmail.com</a>
+              </p>
+              <p>
+                <i class="fas fa-phone"></i>
+                <a href="tel:+201030656171">+20 10 30 656 171</a>
+              </p>
+              <p>
+                <i class="fas fa-map-marker-alt"></i>
+                Cairo, Egypt
+              </p>
+            </div>
+            <div class="contact-social">
+              <div class="social-icons">
+                <a target="_blank" href="https://github.com/AwadCoding" class="fab fa-github"></a>
+                <a target="_blank" href="https://www.https://www.linkedin.com/in/mahmoudawad11/"
+                  class="fab fa-linkedin"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Mahmoud Awad</p>
+    <div class="social-icons">
+      <a target="_blank" href="https://github.com/AwadCoding"><i class="fab fa-github"></i></a>
+      <a target="_blank" href="https://www.linkedin.com/in/mahmoudawad11/"><i class="fab fa-linkedin"></i></a>
+      <a target="_blank" href="https://www.youtube.com/@awadcoding" target="_blank"><i class="fab fa-youtube"></i></a>
+    </div>
+  </footer>
+  <!-- Back to Top Button -->
+  <button id="backToTopBtn" title="Back to Top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+  <script src="js/main.js"></script>
+  <script></script>
+</body>
+
 </html>

@@ -1,133 +1,294 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-        <meta charset="UTF-8" />
+  <head>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <!-- link css -->
-    <link rel="stylesheet" href="../css/about.css" />
-    <!-- link icons  -->
-    <link rel="stylesheet" href="../css/all.min.css" />
-    <!-- google fonts -->
-     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <title>About | Mahmoud Awad</title>
+   <!-- Meta Description -->
+<meta name="description" content="Learn more about Mahmoud Awad — a passionate Front-End Developer with experience in building responsive websites, leading student teams, and creating educational content. Explore his skills, certifications, and personal story." />
 
-    <title>Mahmoud Awad | Front-End</title>
-    
-</head>
-<body>
-    <div class="container_body">
-         <header>
-        <div class="container">
-          <div class="logo">
-            <a href="../index.html">
-              <i class="fa fa-code" aria-hidden="true"></i>
-              <span>mahmoud awad</span>
-            </a>
-          </div>
-          <div class="links">
-              <ul>
-              <li><a href="about.html">About</a></li>
-              <li><a href="contact.html">Contact</a></li>
-              <li><a href="projects.html">Projects</a></li>
-             </ul>
-            </div>
-                <!-- زر المينيو -->
-             <div class="menu-toggle">
-                    <i class="fa fa-bars open-icon"></i>
-                    <i class="fa fa-times close-icon"></i>
-              </div>
+<!-- Open Graph Tags (For Facebook, LinkedIn, etc.) -->
+<meta property="og:title" content="About | Mahmoud Awad" />
+<meta property="og:description" content="Meet Mahmoud Awad — Front-End Developer and content creator. Discover his journey, skills, and experience in web development." />
+<meta property="og:image" content="https://awadcoding.github.io/portofolio/image/about_Preview.png" />
+<meta property="og:url" content="https://awadcoding.github.io/portofolio/pages/about.html" />
+<meta property="og:type" content="website" />
 
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="About | Mahmoud Awad" />
+<meta name="twitter:description" content="Explore Mahmoud Awad’s background, front-end development skills, and journey in the tech field." />
+<meta name="twitter:image" content="https://awadcoding.github.io/portofolio/image/about_Preview.png" />
+<!-- Favicon -->
+  <link rel="icon" href="../image/favicon-32x32.png" type="image/png" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
 
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      integrity="sha512-..."
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/style_about.css" />
+    <link rel="icon" href="images/favicon.png" />
+
+    <!-- libary AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header class="header">
+      <nav>
+        <div class="logo">
+          <a href="../index.html">
+            <i class="fas fa-code"></i>
+            <span>Mahmoud Awad</span>
+          </a>
         </div>
+        <ul class="nav-links">
+          <li><a href="../index.html">Home</a></li>
+          <li><a class="active" href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a class="btn-header" href="../index.html#contact">Contact</a></li>
+        </ul>
+
+        <div class="menu-toggle_open">
+          <i class="fas fa-bars"></i>
+        </div>
+        <div class="menu-toggle_close">
+          <i class="fas fa-times"></i>
+        </div>
+      </nav>
     </header>
 
-    <main>
-        <div class="about_me">
-            <h1>About Me</h1>
-            <p>I'm a passionate front-end developer with a focus on creating intuitive and engaging user experiences. With a background in computer science and a keen eye for design, I strive to build web applications that are both functional and aesthetically pleasing.</p>
+   <main>
+  <!-- Hero Section -->
+  <section class="about-hero" data-aos="fade-up">
+    <div class="container">
+      <h1>Hi, I'm Mahmoud Awad 👋</h1>
+      <p>Front-End Developer & Web Enthusiast</p>
+      <a target="_blank" href="../assets/Mahmoud_Awad_CV.pdf" class="btn" download >Download CV</a>
+    </div>
+  </section>
+
+  <!-- Who I Am -->
+  <section class="about-intro" data-aos="fade-up">
+    <h2>Who I Am</h2>
+    <p>
+      I’m Mahmoud Awad — a front-end developer and educational content creator with a solid foundation in modern web technologies and over 2 years of hands-on experience.
+      I specialize in building responsive and user-centered interfaces using HTML, CSS, and JavaScript. I also have strong skills in UI design, Git version control, and using AI tools in development workflows.
+    </p>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="skills" data-aos="fade-up">
+    <h2>Skills</h2>
+    <ul class="skills-list">
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JavaScript</li>
+      <li>React</li>
+      <li>Git & GitHub</li>
+      <li>UI Design</li>
+    </ul>
+  </section>
+
+  <!-- Tools & Tech -->
+  <section class="tools" data-aos="fade-up">
+    <h2>Tools & Technologies</h2>
+    <div class="tools-icons">
+      <ul class="tools-list">
+      <li><i class="fab fa-figma">  </i>design tools</li>
+      <li><i class="fab fa-github">  </i>version control</li>
+      <li><i class="fas fa-code">  </i>coding</li>
+      <li><i class="fas fa-cogs">  </i>development</li>
+      <li><i class="fas fa-terminal">  </i>command line</li>
+      </ul>
+    
+    </div>
+  </section>
+
+  <!-- Education -->
+  <section class="education" data-aos="fade-up">
+    <h2>Education & Certifications</h2>
+    <ul>
+      <li data-aos="fade-right">
+      <div class="cert-card">
+        
+        <div class="cert-info">
+          <span>Bachelor of Law – Helwan University (2023–2027)</span>
+          <!-- <a href="https://drive.google.com/your-certificate-link" target="_blank" class="cert-btn">
+            View Certificate
+          </a> -->
         </div>
-        <div class="main_about">
-            <div class="contacat">
-                <div class="experience">
-            <h2>Experience</h2>
-  <div class="timeline">
-    <div class="timeline-item">
-      <div class="icon"><i class="fa fa-briefcase"></i></div>
-      <div class="details">
-        <h3>Front-End Developer at Tech Solutions Inc.</h3>
-        <span>2020 - Present</span>
+        <!-- <div class="cert-preview">
+          <img src="no-image.jpg" alt="Certificate Preview" />
+        </div> -->
       </div>
+    </li>
+      <li data-aos="fade-left">
+      <div class="cert-card">
+        <div class="cert-info" >
+          <span>Front-End Development – SCCI Student Activity (2024–2025)</span>
+          <a href="https://drive.google.com/file/d/13u0r-LHKXfjCIak1aNKNt8TBBri4PngQ/view?usp=sharing" target="_blank" class="cert-btn">
+            View Certificate
+          </a>
+        </div>
+        <div class="cert-preview">
+          <img src="../image/Certifications/Front-End Development – SCCI Student Activity.jpg" alt="Certificate Preview" />
+        </div>
+      </div>
+    </li>
+      <li data-aos="fade-right">
+      <div class="cert-card">
+        
+        <div class="cert-info">
+          <span>Web Development – Egypt FWD (Mar–Sep 2022)</span>
+          <a href="https://drive.google.com/file/d/1OThMg106GRLyUYr0dMipEpSualKOD46m/view?usp=sharing" target="_blank" class="cert-btn">
+            View Certificate
+          </a>
+        </div>
+        <div class="cert-preview">
+          <img src="../image/Certifications/Web Development – Egypt FWD.png" alt="Certificate Preview" />
+        </div>
+      </div>
+    </li>
+      <li data-aos="fade-left">
+      <div class="cert-card">
+       
+        <div class="cert-info">
+          <span>Digital Marketing – Google, Udacity (2022–2023)</span>
+          <a href="https://drive.google.com/file/d/1N98cEffvDIOSVOkmHfVWAKGijeV-0Ilr/view?usp=sharing" target="_blank" class="cert-btn">
+            View Certificate
+          </a>
+        </div>
+         <div class="cert-preview">
+          <img src="../image/Certifications/Digital Marketing – Google, Udacity .png" alt="Certificate Preview" />
+        </div>
+      </div>
+    </li>
+      <li data-aos="fade-right">
+      <div class="cert-card">
+       
+        <div class="cert-info">
+          <span>Business English – Nafham Platform (Apr–Aug 2023)</span>
+          <a href="https://drive.google.com/file/d/1pESbp0TySO3NFRJX6JZ6tDb7YepxbYTv/view?usp=sharing" target="_blank" class="cert-btn">
+            View Certificate
+          </a>
+        </div>
+         <div class="cert-preview">
+          <img src="../image/Certifications/Business English – Nafham Platform.jpg" alt="Certificate Preview" />
+        </div>
+      </div>
+    </li>
+      <li data-aos="fade-left">
+      <div class="cert-card">
+       
+        <div class="cert-info">
+          <span>Essentials of ChatGPT – Almdrasa Platform (Apr–Aug 2023)</span>
+          <a href="https://drive.google.com/file/d/1bbwN-YLEuGcMItnXFMUQxIjEL0mp8Mqx/view?usp=sharing" target="_blank" class="cert-btn">
+            View Certificate
+          </a>
+        </div>
+         <div class="cert-preview">
+          <img src="../image/Certifications/Essentials of ChatGPT-Almdrasa.jpg" alt="Certificate Preview" />
+        </div>
+      </div>
+    </li>
+    </ul>
+  </section>
+  <!-- Experience -->
+  <section class="experience" data-aos="fade-up">
+  <h2>Experience</h2>
+  <div class="experience-timeline">
+    <div class="experience-card" data-aos="fade-left">
+      <h3><i class="fas fa-user-tie"></i> Team Leader – Divology, SCCI</h3>
+      <p>Led the front-end team in the <strong>Divology Startup Challenge</strong> under the SCCI initiative. Successfully delivered a responsive web platform and secured a winning position.</p>
+      <a href="https://www.linkedin.com/posts/mahmoudawad11_scci25-divology-frontend-activity-7347717290332753921-wKLn" target="_blank">🔗 View LinkedIn Post</a>
     </div>
 
-    <div class="timeline-item">
-      <div class="icon"><i class="fa fa-briefcase"></i></div>
-      <div class="details">
-        <h3>Web Developer at Creative Agency Co.</h3>
-        <span>2018 - 2020</span>
-      </div>
+    <div class="experience-card" data-aos="fade-right">
+      <h3><i class="fas fa-laptop-code"></i> Freelance Web Developer</h3>
+      <p>Developed and deployed multiple responsive landing pages and personal projects using HTML, CSS, and JavaScript for individuals and student organizations.</p>
     </div>
-
-    <div class="timeline-item">
-      <div class="icon"><i class="fa fa-briefcase"></i></div>
-      <div class="details">
-        <h3>Freelance Web Designer</h3>
-        <span>2016 - 2018</span>
-      </div>
-    </div>
+    <div class="experience-card" data-aos="fade-left">
+  <h3> <i class="fas fa-graduation-cap"></i> Front-End Trainee – Egypt FWD</h3>
+  <p>Completed hands-on projects and assignments as part of the FWD Web Development track, focusing on responsive design and JavaScript applications.</p>
+</div>
+    <div class="experience-card" data-aos="fade-right">
+      <h3><i class="fas fa-book"></i> Content Creator</h3>
+      <p>Created educational content on web development topics, including tutorials and articles, to help beginners learn front-end technologies.</p>
   </div>
-                </div>
-                 <div class="skills">
-                    <h2>Skills</h2>
-                    <div class="skill">
-                        <span>HTML</span>
-                <span>CSS</span>
-                <span>JavaScript</span>
-                <span>React</span>
-                <span>Vue.js</span>
-                <span>Angular</span>
-                <span>Responsive Design</span>
-                <span>UI/UX</span>
-                <span>Git</span>
-                <span>Agile development</span>
-                    </div>
-                
-                 </div>
-                 <div class="interests">
-                    <h2>Interests</h2>
-                    <p>Outside of coding, I enjoy exploring new technologies, contributing to open-source projects, and staying up-to-date with the latest trends in web development. I also have a passion for photography and travel, which often inspires my design work.</p>
-                 </div>
-            </div>
-            <div class="image"></div>
-        </div>
-      
-    </main>
+</section>
+  <!-- Personal Skills -->
+  <section class="personal-skills" data-aos="fade-up">
+    <h2>Personal Skills</h2>
+    <ul>
+      <li>Problem Solving & Logical Thinking</li>
+      <li>Time Management & Goal Setting</li>
+      <li>Creative Collaboration</li>
+      <li>Copywriting & Communication Skills</li>
+      <li>Adaptability & Continuous Learning</li>
+      <li>Attention to Detail</li>
+      <li>Team Leadership & Mentoring</li>
 
+    </ul>
+  </section>
 
+  <!-- Projects Summary -->
+  <section class="project-summary" data-aos="fade-up">
+    <h2>Highlighted Projects</h2>
+    <p>
+      I've worked on several web projects including landing pages, portfolios, and real-world applications. Check out my latest work!
+    </p>
+    <a href="projects.html" class="btn">View Projects</a>
+  </section>
 
+  <!-- Hobbies -->
+  <section class="hobbies" data-aos="fade-up">
+    <h2>Hobbies & Interests</h2>
+    <p>
+      When I’m not coding, I enjoy reading, exploring new tools, designing in Figma, and staying up-to-date with tech trends.
+    </p>
+      <p>I also enjoy playing strategy games like <strong>Command & Conquer: Generals – Zero Hour</strong>.</p>
+  
+  </section>
 
-     <footer>
-        <div class="container">
-              <div class="social">
-            
-              <a  href="https://www.facebook.com/Awad.Coding" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
-              <a  href="https://www.linkedin.com/in/mahmoudawad11/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
-              <a  href="https://github.com/AwadCoding" target="_blank"><i class="fa-brands fa-github"></i></a>
-            </div>
-          <div class="copyright">
-            <p>&copy; 2025 Mahmoud Awad. All rights reserved.</p>
-          </div>
-      </footer>
+  <!-- CTA Section -->
+  <section class="cta" data-aos="fade-up">
+    <h2>Let’s Build Something Together!</h2>
+    <a href="../index.html#contact" class="btn">Get in Touch</a>
+  </section>
+  
+</main>
 
+    <footer>
+      <p>&copy; 2025 Mahmoud Awad</p>
+      <div class="social-icons">
+        <a target="_blank" href="https://github.com/AwadCoding">
+          <i class="fab fa-github"></i>
+        </a>
+        <a target="_blank" href="https://www.linkedin.com/in/mahmoudawad11/">
+          <i class="fab fa-linkedin"></i>
+        </a>
+         <a target="_blank" href="https://www.youtube.com/@awadcoding" target="_blank"><i class="fab fa-youtube"></i></a>
 
-
-    </div>
-   <script>
-  const toggleBtn = document.querySelector('header .container .menu-toggle');
-  const header = document.querySelector('header');
-
-  toggleBtn.addEventListener('click', () => {
-    header.classList.toggle('active');
-  });
-</script>
-</body>
+      </div>
+    </footer>
+    <!-- Back to Top Button -->
+<button id="backToTopBtn" title="Back to Top">
+  <i class="fas fa-arrow-up"></i>
+</button>
+    <script src="../js/about.js"></script>
+  </body>
 </html>
