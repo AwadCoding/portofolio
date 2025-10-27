@@ -38,7 +38,7 @@ menuToggle_close.addEventListener("click", () => {
 
   // ✅ رابط الـ Webhook بتاع n8n (من الصورة اللي بعتّها)
   const webhookURL =
-    "https://mahmoudawad111234r.app.n8n.cloud/webhook-test/contact-form";
+    "https://mahmoudawad111234r.app.n8n.cloud/webhook/contact-form";
 
   // ✅ فورم الإرسال
   function sendMail(event) {
