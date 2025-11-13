@@ -34,6 +34,22 @@ body,html {
     padding: 0;
 }
 
+body::-webkit-scrollbar {
+    width: 10px;
+}
+body::-webkit-scrollbar-track {
+    background: var(--accent-color);
+}
+body::-webkit-scrollbar-thumb {
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+    border: 2px solid var(--accent-color);
+}
+::selection {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+}
+
 ul {
     list-style: none;
     padding: 0;
@@ -655,10 +671,6 @@ p {
     }
 }
 
-/* @keyframes scrollSkillsReverse {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(50%); }
-} */
 
 @media (max-width: 600px) {
 
@@ -762,6 +774,9 @@ p {
     color: var(--text-muted);
     margin-bottom: 20px;
 }
+.contact-s_info .contact-social  a{
+    transition: all 0.3s ease-in-out;
+}
 #contact .container-contact .contact-left .contact-s_info .contact-social  a:hover {
     color: var(--accent-color);
     text-shadow: 0 0 10px var(--secondary-color);
@@ -814,9 +829,11 @@ footer .social-icons {
 footer .social-icons a {
     color: var(--text-color);
     font-size: 2rem;
+    transition: all 0.3s ease-in-out;
 }
 footer .social-icons a:hover {
-    color: var(--accent-color);
+    transform: rotate(10deg); ;
+    color: var(--secondary-color);
 }
 /* =============== Back to Top Button =============== */
 #backToTopBtn {
