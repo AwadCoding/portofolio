@@ -1,86 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-        <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!-- link css -->
-    <link rel="stylesheet" href="../css/contact.css">
-    <!-- link icons  -->
-    <link rel="stylesheet" href="../css/all.min.css">
-    <!-- google fonts -->
-     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Mahmoud Awad</title>
+  <!-- Meta Description -->
+  <meta name="description"
+    content="Get in touch with Mahmoud Awad — Front-End Developer. Send a message, connect on social media, or reach out via email.">
+  <meta name="robots" content="index, follow">
 
-    <title>Mahmoud Awad | Front-End</title>
-  <!-- script -->
-  <script src="../js/main.js" defer></script>  
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"  ></script>
-  
+  <!-- Open Graph Tags -->
+  <meta property="og:title" content="Contact | Mahmoud Awad">
+  <meta property="og:description"
+    content="Want to work together? Send Mahmoud Awad a message through the contact form or connect on social media.">
+  <meta property="og:image" content="https://awadcoding.github.io/portofolio/image/website_Preview.png">
+  <meta property="og:url" content="https://awadcoding.github.io/portofolio/pages/contact.html">
+  <meta property="og:type" content="website">
 
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Contact | Mahmoud Awad">
+  <meta name="twitter:description"
+    content="Reach out to Mahmoud Awad for collaboration, freelance work, or just to say hello.">
+  <meta name="twitter:image" content="https://awadcoding.github.io/portofolio/image/website_Preview.png">
+
+  <!-- Favicon -->
+  <link rel="icon" href="../image/favicon.ico" type="image/x-icon">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap"
+    rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+
+  <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/style_contact.css">
 </head>
+
 <body>
-    <div class="container_body">
-         <header>
-        <div class="container">
-          <div class="logo">
-            <a href="../index.html">
-              <i class="fa fa-code" aria-hidden="true"></i>
-              <span>mahmoud awad</span>
+  <header class="header">
+    <nav>
+      <div class="logo">
+        <a href="../index.html">
+          <i class="fas fa-code"></i>
+          <span>Mahmoud Awad</span>
+        </a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a class="btn-header active" href="contact.html"><i class="fas fa-handshake"></i> Hire Me</a></li>
+      </ul>
+      <div class="menu-toggle" id="menuToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="contact-hero" data-aos="fade-up">
+      <h1>Get in Touch</h1>
+      <p>Have a question or want to work together? I'd love to hear from you. Fill out the form or reach out directly.</p>
+    </section>
+
+    <!-- Contact Content -->
+    <div class="contact-wrapper">
+      <!-- Form -->
+      <div class="contact-form-section" data-aos="fade-right">
+        <h2>Send a Message</h2>
+        <form id="contact-form" onsubmit="sendMail(event)">
+          <input id="user_name" type="text" placeholder="Your Name" required>
+          <input id="user_email" type="email" placeholder="Your Email" required>
+          <textarea id="message" placeholder="Your Message" required></textarea>
+          <input type="hidden" id="title" value="Contact Page Message">
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+
+      <!-- Info -->
+      <div class="contact-info-section" data-aos="fade-left">
+        <div class="info-card">
+          <h3><i class="fas fa-address-card"></i> Contact Details</h3>
+          <div class="info-item">
+            <i class="fas fa-envelope"></i>
+            <a href="mailto:mahmoud.awad.official@gmail.com">mahmoud.awad.official@gmail.com</a>
+          </div>
+          <div class="info-item">
+            <i class="fas fa-phone"></i>
+            <a href="tel:+201030656171">+20 10 30 656 171</a>
+          </div>
+          <div class="info-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>Cairo, Egypt</span>
+          </div>
+        </div>
+
+        <div class="social-card">
+          <h3>Connect With Me</h3>
+          <div class="contact-socials">
+            <a target="_blank" href="https://github.com/AwadCoding" title="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+            <a target="_blank" href="https://www.linkedin.com/in/mahmoudawad11/" title="LinkedIn">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a target="_blank" href="https://www.youtube.com/@awadcoding" title="YouTube">
+              <i class="fab fa-youtube"></i>
             </a>
           </div>
-          <div class="links">
-              <ul>
-              <li><a href="about.html">About</a></li>
-              <li><a href="contact.html">Contact</a></li>
-              <li><a href="projects.html">Projects</a></li>
-             </ul>
-            </div>
-                <!-- زر المينيو -->
-             <div class="menu-toggle">
-                    <i class="fa fa-bars open-icon"></i>
-                    <i class="fa fa-times close-icon"></i>
-              </div>
-
-
         </div>
-    </header>
-
-    <main>
-        <div class="contact">
-            <h1>Contact Me</h1>
-            <p>If you have any questions or inquiries, please don't hesitate to contact me.</p>
-        </div>
-        <div class="form"  >
-          <form id="contact-form" onsubmit="sendMail(event)">
-  <input id="user_name" type="text" placeholder="Your Name" required>
-  <input id="user_email" type="email" placeholder="Your Email" required>
-  <textarea id="message" placeholder="Your Message" required></textarea>
-  <input type="hidden" id="title" value="my Website Contact Message">
-  <button type="submit">Send Message</button>
-</form>
-        </div>
-    </main>
-
-
-
-
-     <footer>
-        <div class="container">
-             <div class="social">
-            
-              <a  href="https://www.facebook.com/Awad.Coding" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
-              <a  href="https://www.linkedin.com/in/mahmoudawad11/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
-              <a  href="https://github.com/AwadCoding" target="_blank"><i class="fa-brands fa-github"></i></a>
-            </div>
-          <div class="copyright">
-            <p>&copy; 2025 Mahmoud Awad. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
-
-
-
+      </div>
     </div>
-  
+  </main>
+
+  <footer>
+    <p>&copy; <span data-year></span> Mahmoud Awad</p>
+    <div class="social-icons">
+      <a target="_blank" href="https://github.com/AwadCoding"><i class="fab fa-github"></i></a>
+      <a target="_blank" href="https://www.linkedin.com/in/mahmoudawad11/"><i class="fab fa-linkedin"></i></a>
+      <a target="_blank" href="https://www.youtube.com/@awadcoding"><i class="fab fa-youtube"></i></a>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button id="backToTopBtn" title="Back to Top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="../js/shared.js"></script>
+  <script src="../js/contact.js"></script>
 </body>
+
 </html>

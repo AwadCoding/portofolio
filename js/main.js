@@ -1,26 +1,15 @@
-const menuToggle_open = document.querySelector(".menu-toggle_open");
-const menuToggle_close = document.querySelector(".menu-toggle_close");
-const navLinks = document.querySelector(".nav-links");
+// =============================================
+// HOME PAGE — Specific Script
+// Requires: shared.js (loaded first in HTML)
+// =============================================
 
-menuToggle_open.addEventListener("click", () => {
-  navLinks.classList.add("active");
-  menuToggle_open.classList.add("active");
-  menuToggle_close.classList.add("active");
-});
-
-menuToggle_close.addEventListener("click", () => {
-  navLinks.classList.remove("active");
-  menuToggle_open.classList.remove("active");
-  menuToggle_close.classList.remove("active");
-});
-
-
+// ── Infinite Skills/Tools Slider ──
 function makeInfiniteSlider(trackSelector) {
   const track = document.querySelector(trackSelector);
   if (!track) return;
-  // انسخ كل العناصر مرة ثانية
+  // Duplicate items for seamless loop
   track.innerHTML += track.innerHTML;
-  // عند المرور بالماوس: وقف الحركة
+  // Pause on hover
   track.addEventListener("mouseenter", () => {
     track.style.animationPlayState = "paused";
   });
@@ -32,19 +21,55 @@ function makeInfiniteSlider(trackSelector) {
 makeInfiniteSlider(".skills-track");
 makeInfiniteSlider(".tools-track");
 
+// ── Render Last 3 Projects from projects-data.js ──
+(function renderHomeProjects() {
+  const grid = document.getElementById("home-projects-grid");
+  if (!grid || typeof PROJECTS === "undefined") return;
 
-// ✅ تفعيل EmailJS
-emailjs.init("9A9ZsdvLth-gcR6zl"); // Public Key بتاعك
+  // Take the last 3 projects
+  const latest = PROJECTS.slice(-3).reverse();
 
-// ✅ رابط الـ Webhook بتاع n8n (من الصورة اللي بعتّها)
+  latest.forEach((project, i) => {
+    const card = document.createElement("div");
+    card.className = "project-card";
+    card.setAttribute("data-aos", "fade-up");
+    card.setAttribute("data-aos-delay", String((i + 1) * 100));
+
+    // Image path: on home page, images are in "image/" folder (no ../)
+    const imgPath = "image/" + project.image;
+
+    card.innerHTML = `
+      <div class="project-image">
+        <img src="${imgPath}" alt="${project.title}" loading="lazy">
+      </div>
+      <div class="project-text">
+        <h3>${project.title}</h3>
+        <p>${project.shortDesc}</p>
+        <a target="_blank" class="btn_link" href="${project.liveUrl}"><i class="fas fa-globe"></i> Live Demo</a>
+        |
+        <a target="_blank" class="btn_link" href="${project.githubUrl}"><i class="fab fa-github"></i> GitHub</a>
+      </div>
+    `;
+
+    grid.appendChild(card);
+  });
+})();
+
+// ── EmailJS Setup ──
+emailjs.init("9A9ZsdvLth-gcR6zl");
+
 const webhookURL =
   "https://mahmoudawad111234r.app.n8n.cloud/webhook/eb91151d-7cf1-4b63-8e3c-e32288df6c75";
 
-// ✅ فورم الإرسال
+// ── Contact Form Handler ──
 function sendMail(event) {
-  event.preventDefault(); // مهم جدًا
+  event.preventDefault();
 
-  // البيانات اللي هتبعت على EmailJS و n8n
+  const submitBtn = document.querySelector('#contact-form button[type="submit"]');
+  const originalText = submitBtn.textContent;
+  submitBtn.textContent = "Sending...";
+  submitBtn.disabled = true;
+
   const params = {
     user_name: document.getElementById("user_name").value,
     user_email: document.getElementById("user_email").value,
@@ -52,63 +77,31 @@ function sendMail(event) {
     title: document.getElementById("title").value,
   };
 
-  /* -----------------------------------
-     1️⃣ إرسال البيانات عبر EmailJS
-  -------------------------------------- */
-  emailjs.send("service_dmfonjn", "template_kpy83s4", params).then(
-    () => {
-      console.log("✅ EmailJS: Message sent!");
-    },
-    (error) => {
-      console.error("❌ EmailJS Error:", error);
-    }
-  );
+  // Send via EmailJS
+  const emailPromise = emailjs
+    .send("service_dmfonjn", "template_kpy83s4", params)
+    .then(() => console.log("✅ EmailJS: Message sent!"))
+    .catch((error) => console.error("❌ EmailJS Error:", error));
 
-  /* -----------------------------------
-     2️⃣ إرسال نفس البيانات إلى n8n Webhook
-  -------------------------------------- */
-  fetch(webhookURL, {
+  // Send to n8n webhook
+  const webhookPromise = fetch(webhookURL, {
     method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
+    headers: { "Content-Type": "application/json" },
     body: JSON.stringify(params),
   })
-    .then((response) => {
-      console.log("✅ Sent to n8n Webhook:", response.status);
-    })
-    .catch((error) => {
-      console.error("❌ n8n Webhook Error:", error);
-    });
+    .then((response) => console.log("✅ Sent to n8n:", response.status))
+    .catch((error) => console.error("❌ n8n Error:", error));
 
-  // ✅ رسالة للمستخدم + تفريغ الفورم
-  alert("✅ Message sent successfully!");
-  document.getElementById("contact-form").reset();
-}
-
-
-
-
-
-AOS.init({
-  duration: 1200,
-  once: true,
-});
-
-// إظهار الزر عند التمرير لأسفل
-window.onscroll = function () {
-  const btn = document.getElementById("backToTopBtn");
-  if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-    btn.style.display = "block";
-  } else {
-    btn.style.display = "none";
-  }
-};
-
-// عند الضغط يرجع لأعلى
-document.getElementById("backToTopBtn").onclick = function () {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth",
+  // Wait for both to complete before showing result
+  Promise.allSettled([emailPromise, webhookPromise]).then((results) => {
+    const allFailed = results.every((r) => r.status === "rejected");
+    if (allFailed) {
+      alert("❌ Failed to send message. Please try again or email directly.");
+    } else {
+      alert("✅ Message sent successfully!");
+      document.getElementById("contact-form").reset();
+    }
+    submitBtn.textContent = originalText;
+    submitBtn.disabled = false;
   });
-};
+}
