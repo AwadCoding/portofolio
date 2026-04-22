@@ -4,14 +4,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Services | Mahmoud Awad</title>
+  <title>Services | Mahmoud Awad — Frontend Developer</title>
+  <meta name="description" content="Hire Mahmoud Awad — a full-stack web developer with 3+ years of experience building custom websites, React apps, Laravel backends, and database-driven systems. Get a free project estimate.">
   
+  <!-- Favicon -->
+  <link rel="icon" href="../image/favicon.ico" type="image/x-icon">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
   
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  
+   <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap"
+    rel="stylesheet">
   <!-- AOS Animation CSS -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   
@@ -51,8 +56,8 @@
       <div class="container text-center">
         <h1 class="hero-title">Got an Idea? <span class="highlight">Let's Build It Right.</span></h1>
         <p class="hero-subtitle">
-          I help startups and businesses build modern, responsive, and high-performance digital experiences. 
-          From simple landing pages to complex web applications.
+          I help startups and businesses build complete digital products — from pixel-perfect front-ends to database-connected backends.
+          3+ years of real-world experience, clean code, and on-time delivery.
         </p>
       </div>
     </section>
@@ -61,23 +66,8 @@
     <section class="services-offerings" data-aos="fade-up">
       <div class="container">
         <h2 class="section-title">What I Do</h2>
-        <div class="offerings-grid">
-          <div class="offering-card" data-aos="zoom-in" data-aos-delay="100">
-            <i class="fas fa-laptop-code"></i>
-            <h3>Custom Websites</h3>
-            <p>Responsive, fast, and SEO-friendly websites tailored exactly to your brand's unique needs without relying on generic templates.</p>
-          </div>
-          <div class="offering-card" data-aos="zoom-in" data-aos-delay="200">
-            <i class="fab fa-react"></i>
-            <h3>Web Applications</h3>
-            <p>Interactive, scalable, and dynamic Single Page Applications (SPAs) built with modern frameworks like React.</p>
-          </div>
-          <div class="offering-card" data-aos="zoom-in" data-aos-delay="300">
-            <i class="fas fa-paint-roller"></i>
-            <h3>UI/UX Implementation</h3>
-            <p>Turning Figma designs into pixel-perfect, accessible, and beautifully animated code that works seamlessly across all devices.</p>
-          </div>
-        </div>
+        <!-- Rendered by services-renderer.js from js/data/services-data.js -->
+        <div class="offerings-grid" id="offerings-grid"></div>
       </div>
     </section>
 
@@ -85,59 +75,17 @@
     <section class="services-process" data-aos="fade-up">
       <div class="container">
         <h2 class="section-title">My Process</h2>
-        <div class="process-timeline">
-          <div class="process-step" data-aos="fade-left" data-aos-delay="100">
-            <div class="step-number">1</div>
-            <div class="step-content">
-              <h3>Discovery</h3>
-              <p>We discuss your goals, target audience, and project requirements. We make sure we are a perfect fit to work together.</p>
-            </div>
-          </div>
-          <div class="process-step" data-aos="fade-right" data-aos-delay="200">
-            <div class="step-number">2</div>
-            <div class="step-content">
-              <h3>Planning & Design Check</h3>
-              <p>I review wireframes and designs, providing technical feedback before finalizing the structural roadmap.</p>
-            </div>
-          </div>
-          <div class="process-step" data-aos="fade-left" data-aos-delay="300">
-            <div class="step-number">3</div>
-            <div class="step-content">
-              <h3>Development</h3>
-              <p>I write clean, modular, and performance-optimized code, keeping you updated with weekly staging links.</p>
-            </div>
-          </div>
-          <div class="process-step" data-aos="fade-right" data-aos-delay="400">
-            <div class="step-number">4</div>
-            <div class="step-content">
-              <h3>Launch & Support</h3>
-              <p>Thorough testing across browsers, deployment to production, and 1 month of post-launch bug-fixing support.</p>
-            </div>
-          </div>
-        </div>
+        <!-- Rendered by services-renderer.js from js/data/services-data.js -->
+        <div class="process-timeline" id="process-timeline"></div>
       </div>
     </section>
 
     <!-- Testimonials Section -->
     <section class="services-testimonials" data-aos="fade-up">
       <div class="container">
-        <h2 class="section-title">Client & Mentor Feedback</h2>
-        <div class="testimonial-card">
-          <div class="testimonial-header">
-            <div class="testimonial-avatar">
-              <i class="fas fa-user-circle"></i>
-            </div>
-            <div class="testimonial-info">
-              <h4>Noha Azzam, MBA</h4>
-              <p>Leadership Coach | Social Impact | G100 Egypt Country Chair</p>
-              <span class="testimonial-date">Mahmoud's Mentor</span>
-            </div>
-            <i class="fab fa-linkedin testimonial-icon"></i>
-          </div>
-          <div class="testimonial-body">
-            <p>"I had the pleasure of mentoring Mahmoud, a highly motivated and talented Front-End Engineer. From day one, he demonstrated a strong grasp of modern web technologies, clean code practices, and an impressive attention to detail in building user interfaces. Mahmoud approaches challenges with curiosity and dedication, consistently delivering high-quality work and collaborating effectively with peers. I'm confident he will be a valuable asset to any team and continue to grow as a standout developer."</p>
-          </div>
-        </div>
+        <h2 class="section-title">Client &amp; Mentor Feedback</h2>
+        <!-- Rendered by services-renderer.js from js/data/services-data.js -->
+        <div id="testimonials-container"></div>
       </div>
     </section>
 
@@ -145,26 +93,8 @@
     <section class="services-faq" data-aos="fade-up">
       <div class="container">
         <h2 class="section-title">Frequently Asked Questions</h2>
-        <div class="faq-container">
-          <div class="faq-item">
-            <button class="faq-question">Do you provide hosting and domain names?<i class="fas fa-chevron-down"></i></button>
-            <div class="faq-answer">
-              <p>While I primarily focus on development, I can guide you through the process of purchasing your domain and setting up hosting (like Vercel, Netlify, or Hostinger) to ensure your app is deployed successfully.</p>
-            </div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-question">What if I need changes after the project is delivered?<i class="fas fa-chevron-down"></i></button>
-            <div class="faq-answer">
-              <p>I provide 1 month of free post-launch support to fix any bugs. For new features or significant changes, we can arrange an hourly maintenance contract ($25/hr).</p>
-            </div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-question">How do we communicate during the project?<i class="fas fa-chevron-down"></i></button>
-            <div class="faq-answer">
-              <p>I prefer async communication via Email or WhatsApp. I also provide weekly progress updates and staging links so you can track the development in real-time.</p>
-            </div>
-          </div>
-        </div>
+        <!-- Rendered by services-renderer.js from js/data/services-data.js -->
+        <div class="faq-container" id="faq-container"></div>
       </div>
     </section>
 
@@ -175,61 +105,10 @@
         <p class="text-center estimator-subtitle">Calculate a rough estimate for your project instantly.</p>
         
         <div class="estimator-container">
-          <!-- Options -->
-          <div class="estimator-options">
-            
-            <!-- Question 1 -->
-            <div class="estimator-group">
-              <h3>1. What type of project is it?</h3>
-              <div class="radio-cards" id="opt-type">
-                <div class="radio-card active" data-value="100">
-                  <i class="fas fa-file-alt"></i>
-                  <span>Landing Page</span>
-                </div>
-                <div class="radio-card" data-value="300">
-                  <i class="fas fa-sitemap"></i>
-                  <span>Multi-page Site</span>
-                </div>
-                <div class="radio-card" data-value="600">
-                  <i class="fas fa-rocket"></i>
-                  <span>Web App / SaaS</span>
-                </div>
-              </div>
-            </div>
+          <!-- Options: Rendered by services-renderer.js from js/data/services-data.js -->
+          <div class="estimator-options" id="estimator-options"></div>
 
-            <!-- Question 2 -->
-            <div class="estimator-group">
-              <h3>2. Do you have the design ready?</h3>
-              <div class="radio-cards" id="opt-design">
-                <div class="radio-card active" data-value="0">
-                  <i class="fab fa-figma"></i>
-                  <span>Yes (Figma/AdobeXD)</span>
-                </div>
-                <div class="radio-card" data-value="100">
-                  <i class="fas fa-pencil-ruler"></i>
-                  <span>No, I need UI assistance</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Question 3 -->
-            <div class="estimator-group">
-              <h3>3. How fast do you need it?</h3>
-              <div class="radio-cards" id="opt-timeline">
-                <div class="radio-card active" data-value="1">
-                  <i class="fas fa-calendar-alt"></i>
-                  <span>Flexible (Standard)</span>
-                </div>
-                <div class="radio-card" data-value="1.5">
-                  <i class="fas fa-bolt"></i>
-                  <span>Rush (+50% fee)</span>
-                </div>
-              </div>
-            </div>
-
-          </div>
-
-          <!-- Result -->
+          <!-- Result (static — always visible) -->
           <div class="estimator-result">
             <div class="result-box">
               <h3>Estimated Price</h3>
@@ -275,10 +154,14 @@
     <i class="fas fa-arrow-up"></i>
   </button>
 
-  <!-- Scripts -->
+  <!-- Scripts: data → renderer (render + interactivity) → shared -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!-- Data source: edit content here -->
+  <script src="../js/data/services-data.js"></script>
+  <!-- Renderer + estimator + FAQ logic -->
+  <script src="../js/services-renderer.js"></script>
   <script src="../js/shared.js"></script>
-  <script src="../js/services.js"></script>
 </body>
 
 </html>
+

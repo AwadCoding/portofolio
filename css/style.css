@@ -14,6 +14,11 @@
     align-items: center;
     padding: 40px;
     gap: 40px;
+    /* @frontend-design: asymmetric glow — right-weighted, not centered */
+    background:
+        radial-gradient(ellipse 60% 70% at 80% 40%, rgba(100, 255, 218, 0.05) 0%, transparent 70%),
+        radial-gradient(ellipse 40% 50% at 20% 60%, rgba(100, 255, 218, 0.03) 0%, transparent 60%);
+    position: relative;
 }
 
 #hero .text_hero {
@@ -64,7 +69,17 @@
     object-fit: cover;
     z-index: 1;
     position: relative;
-    filter: drop-shadow(0 0 20px rgba(100, 255, 218, 0.08));
+    /* @frontend-design: stronger layered shadow for depth */
+    filter:
+        drop-shadow(0 0 30px rgba(100, 255, 218, 0.12))
+        drop-shadow(0 20px 40px rgba(0, 0, 0, 0.5));
+    transition: filter var(--transition-med);
+}
+
+#hero .image_hero:hover .hero-img {
+    filter:
+        drop-shadow(0 0 45px rgba(100, 255, 218, 0.2))
+        drop-shadow(0 20px 40px rgba(0, 0, 0, 0.5));
 }
 
 /* ── Floating Tech Icons ── */
@@ -196,9 +211,10 @@
 
 .skill-card:hover,
 .tool-card:hover {
-    transform: scale(1.08) rotate(-2deg);
+    /* @frontend-design: spring scale + slight tilt = playful, memorable */
+    transform: scale(1.1) rotate(-2deg);
     border-color: var(--secondary-color);
-    box-shadow: 0 0 15px rgba(100, 255, 218, 0.15);
+    box-shadow: 0 0 20px rgba(100, 255, 218, 0.18), 0 8px 16px rgba(0, 0, 0, 0.4);
 }
 
 .skill-card h3,
@@ -206,6 +222,15 @@
     font-size: 0.85rem;
     margin: 0;
     font-weight: 500;
+}
+
+/* ── Font Awesome icons inside slider cards ── */
+.skill-card i,
+.tool-card i {
+    font-size: 2.2rem;
+    line-height: 1;
+    transition: transform var(--transition-fast), filter var(--transition-fast);
+    filter: drop-shadow(0 0 6px currentColor);
 }
 
 @keyframes scrollSkills {
@@ -326,8 +351,12 @@
 }
 
 .project-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 8px 30px rgba(100, 255, 218, 0.12);
+    transform: translateY(-10px);
+    /* @frontend-design: layered shadow = depth perception */
+    box-shadow:
+        0 20px 40px rgba(0, 0, 0, 0.5),
+        0 0 30px rgba(100, 255, 218, 0.1),
+        inset 0 0 0 1px rgba(100, 255, 218, 0.15);
     border-color: rgba(100, 255, 218, 0.3);
 }
 

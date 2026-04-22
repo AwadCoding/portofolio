@@ -74,9 +74,10 @@
     position: absolute;
     bottom: -2px;
     left: 0;
-    width: 60px;
+    /* @frontend-design: gradient line = more visual interest than flat color */
+    width: 80px;
     height: 2px;
-    background: var(--secondary-color);
+    background: linear-gradient(90deg, var(--secondary-color), transparent);
 }
 
 .about-intro p,
@@ -93,27 +94,55 @@
    ══════════════════════════════════════════════ */
 .skills-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: 12px;
+    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+    gap: 14px;
     margin-top: 20px;
+    list-style: none;
+    padding: 0;
 }
 
 .skills-list li {
     background-color: var(--accent-color);
-    padding: 12px 16px;
-    border-radius: 8px;
+    padding: 18px 12px 14px;
+    border-radius: 12px;
     text-align: center;
     color: var(--text-color);
     border: 1px solid var(--border);
     transition: all var(--transition-fast);
-    font-size: 0.95rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    cursor: default;
+}
+
+.skills-list li i {
+    font-size: 2rem;
+    line-height: 1;
+    transition: filter var(--transition-fast), transform var(--transition-fast);
+    filter: drop-shadow(0 0 5px currentColor);
+}
+
+.skills-list li span {
+    font-size: 0.82rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    transition: color var(--transition-fast);
 }
 
 .skills-list li:hover {
     border-color: var(--secondary-color);
-    color: var(--secondary-color);
-    transform: translateY(-3px);
-    box-shadow: 0 4px 12px rgba(100, 255, 218, 0.1);
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 8px 24px rgba(100, 255, 218, 0.12);
+}
+
+.skills-list li:hover i {
+    filter: drop-shadow(0 0 10px currentColor);
+    transform: scale(1.15);
+}
+
+.skills-list li:hover span {
+    color: var(--text-color);
 }
 
 /* ══════════════════════════════════════════════
@@ -312,9 +341,12 @@
 }
 
 .experience-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 6px 20px rgba(100, 255, 218, 0.08);
-    border-color: rgba(100, 255, 218, 0.3);
+    transform: translateY(-5px);
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.4),
+        /* @frontend-design: left edge glow = visual callback to the accent border */
+        -4px 0 20px rgba(100, 255, 218, 0.1);
+    border-color: rgba(100, 255, 218, 0.25);
     border-left-color: var(--secondary-color);
 }
 
@@ -379,13 +411,26 @@
 .cta {
     text-align: center;
     margin-top: 40px;
-    padding: 50px 20px;
+    padding: 60px 20px;
     background: var(--accent-color);
-    border-radius: 16px;
+    border-radius: 20px;
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
     border: 1px solid var(--border);
+    /* @frontend-design: CTA needs to feel like a destination — glow ring */
+    box-shadow:
+        0 0 0 1px rgba(100, 255, 218, 0.06),
+        0 20px 60px rgba(0, 0, 0, 0.4),
+        inset 0 1px 0 rgba(100, 255, 218, 0.05);
+    transition: box-shadow var(--transition-med);
+}
+
+.cta:hover {
+    box-shadow:
+        0 0 0 1px rgba(100, 255, 218, 0.12),
+        0 20px 60px rgba(0, 0, 0, 0.5),
+        inset 0 1px 0 rgba(100, 255, 218, 0.08);
 }
 
 .cta h2 {
