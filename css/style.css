@@ -213,15 +213,46 @@
     border: 1px solid var(--border);
     padding: 18px 0;
     margin-bottom: 10px;
+    /* fade edges للـ seamless look */
+    -webkit-mask-image: linear-gradient(
+        to right,
+        transparent 0%,
+        black 8%,
+        black 92%,
+        transparent 100%
+    );
+    mask-image: linear-gradient(
+        to right,
+        transparent 0%,
+        black 8%,
+        black 92%,
+        transparent 100%
+    );
+}
+
+/* pause on hover */
+.skills-slider:hover .skills-track,
+.tools-slider:hover .tools-track {
+    animation-play-state: paused;
 }
 
 .skills-track,
 .tools-track {
     display: flex;
     height: 100px;
+    /* width: max-content مهم جداً للـ seamless loop */
     width: max-content;
-    gap: 20px;
-    animation: scrollSkills 20s linear infinite;
+    gap: 0;
+    will-change: transform;
+}
+
+.skills-track {
+    animation: scrollLeft 25s linear infinite;
+}
+
+.tools-track {
+    /* عكس الاتجاه للـ tools */
+    animation: scrollRight 30s linear infinite;
 }
 
 .skill-card,
@@ -267,9 +298,15 @@
     filter: drop-shadow(0 0 6px currentColor);
 }
 
-@keyframes scrollSkills {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
+/* Seamless loop: items مضاعفة 4x في JS، الـ animation تتحرك -25% */
+@keyframes scrollLeft {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-25%); }
+}
+
+@keyframes scrollRight {
+    0%   { transform: translateX(-25%); }
+    100% { transform: translateX(0); }
 }
 
 @media (max-width: 600px) {

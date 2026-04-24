@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
           <h3>${s.label}</h3>
         </div>`)
       .join("");
-    skillsTrack.innerHTML = items + items; // duplicate for seamless loop
+    skillsTrack.innerHTML = items + items + items + items; // 4x for guaranteed seamless fill
   }
 
   // ── Tools Slider ───────────────────────────────────
@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
           <h3>${t.label}</h3>
         </div>`)
       .join("");
-    toolsTrack.innerHTML = items + items; // duplicate for seamless loop
+    toolsTrack.innerHTML = items + items + items + items; // 4x for guaranteed seamless fill
   }
 
   // ── About Me Snippet ───────────────────────────────
