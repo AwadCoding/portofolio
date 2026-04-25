@@ -583,7 +583,6 @@
 }
 
 #contact form button {
-    border: none;
     cursor: pointer;
     font-family: var(--font-family);
 }

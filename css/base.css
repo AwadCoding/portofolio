@@ -59,6 +59,53 @@ html {
     line-height: 1.6;
 }
 
+/* ══════════════════════════════════════════════
+   Page Transitions
+   ══════════════════════════════════════════════ */
+
+/* ── CSS View Transitions API (Chrome 126+) ── */
+@view-transition {
+    navigation: auto;
+}
+
+/* ── Shared keyframes ── */
+@keyframes page-blur-in {
+    from {
+        opacity: 0;
+        filter: blur(10px);
+    }
+    to {
+        opacity: 1;
+        filter: blur(0);
+    }
+}
+
+@keyframes page-blur-out {
+    to {
+        opacity: 0;
+        filter: blur(10px);
+    }
+}
+
+/* Chrome 126+: view transition hooks */
+::view-transition-new(root) {
+    animation: page-blur-in 0.45s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+::view-transition-old(root) {
+    animation: page-blur-out 0.35s cubic-bezier(0.4, 0, 1, 1) both;
+}
+
+/* ── JS class-based fallback (all browsers) ── */
+.page-entering {
+    animation: page-blur-in 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.page-leaving {
+    animation: page-blur-out 0.38s cubic-bezier(0.4, 0, 1, 1) both;
+    pointer-events: none;
+}
+
 /* ── Scrollbar ── */
 body::-webkit-scrollbar {
     width: 8px;
