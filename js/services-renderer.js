@@ -58,11 +58,15 @@ document.addEventListener("DOMContentLoaded", () => {
               <p>${t.role}</p>
               <span class="testimonial-date">${t.relation}</span>
             </div>
-            <i class="${t.icon} testimonial-icon"></i>
+            ${t.link
+              ? `<a href="${t.link}" target="_blank" rel="noopener" class="testimonial-icon-link" title="View on LinkedIn"><i class="${t.icon} testimonial-icon"></i></a>`
+              : `<i class="${t.icon} testimonial-icon"></i>`
+            }
           </div>
           <div class="testimonial-body">
             <p>"${t.quote}"</p>
           </div>
+          ${t.link ? `<a href="${t.link}" target="_blank" rel="noopener" class="testimonial-source">View original post on LinkedIn <i class="fas fa-external-link-alt"></i></a>` : ""}
         </div>`)
       .join("");
   }

@@ -26,8 +26,8 @@ makeInfiniteSlider(".tools-track");
   const grid = document.getElementById("home-projects-grid");
   if (!grid || typeof PROJECTS === "undefined") return;
 
-  // Take the last 3 projects
-  const latest = PROJECTS.slice(-3).reverse();
+  // Take the first 3 projects (newest added at the top)
+  const latest = PROJECTS.slice(0, 3);
 
   latest.forEach((project, i) => {
     const card = document.createElement("div");

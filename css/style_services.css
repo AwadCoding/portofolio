@@ -451,6 +451,42 @@
   opacity: 0.9;
 }
 
+.testimonial-icon-link {
+  text-decoration: none;
+  margin-left: auto;
+  transition: transform 0.2s ease;
+}
+
+.testimonial-icon-link:hover {
+  transform: scale(1.15);
+}
+
+.testimonial-source {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 20px;
+  padding: 8px 16px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #0a66c2;
+  background: rgba(10, 102, 194, 0.08);
+  border: 1px solid rgba(10, 102, 194, 0.2);
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.testimonial-source:hover {
+  background: rgba(10, 102, 194, 0.15);
+  border-color: rgba(10, 102, 194, 0.4);
+  color: #3b9eff;
+}
+
+.testimonial-source i {
+  font-size: 0.75rem;
+}
+
 /* ── FAQ Section ── */
 .services-faq {
   padding: 80px 0;
@@ -458,30 +494,37 @@
 }
 
 .faq-container {
-  max-width: 800px;
+  max-width: 900px;
   margin: 50px auto 0;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
 }
 
 .faq-item {
   background-color: var(--card-bg);
   border: 1px solid rgba(255, 255, 255, 0.05);
-  border-radius: 8px;
+  border-radius: 10px;
   overflow: hidden;
+  transition: border-color 0.3s ease;
+  align-self: start;
+}
+
+.faq-item:hover {
+  border-color: rgba(100, 255, 218, 0.15);
 }
 
 .faq-question {
   width: 100%;
   background: none;
   border: none;
-  padding: 20px 25px;
+  padding: 18px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 12px;
   color: #fff;
-  font-size: 1.1rem;
+  font-size: 0.98rem;
   font-family: inherit;
   font-weight: 500;
   cursor: pointer;
@@ -498,6 +541,8 @@
   color: var(--secondary-color);
   transition: transform 0.3s ease;
   opacity: 0.7;
+  flex-shrink: 0;
+  font-size: 0.85rem;
 }
 
 .faq-question:hover i,
@@ -517,9 +562,10 @@
 }
 
 .faq-answer p {
-  padding: 0 25px 22px;
-  color: var(--text-color);
-  line-height: 1.7;
+  padding: 0 20px 18px;
+  color: var(--text-muted);
+  line-height: 1.65;
+  font-size: 0.9rem;
 }
 
 /* ── Responsive Design ── */
@@ -554,5 +600,9 @@
   
   .step-content {
     padding: 20px;
+  }
+  
+  .faq-container {
+    grid-template-columns: 1fr;
   }
 }

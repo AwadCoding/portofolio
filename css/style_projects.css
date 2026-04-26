@@ -386,4 +386,60 @@
         width: 100%;
         justify-content: center;
     }
+
+    .modal-stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+}
+
+/* ══════════════════════════════════════════════
+   Stats Bar — Numbers that prove impact
+   ══════════════════════════════════════════════ */
+.modal-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+    margin-bottom: 24px;
+    padding: 16px;
+    background: rgba(100, 255, 218, 0.04);
+    border: 1px solid rgba(100, 255, 218, 0.12);
+    border-radius: 12px;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 4px;
+}
+
+.stat-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+    line-height: 1.2;
+}
+
+.stat-label {
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    line-height: 1.3;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+/* ══════════════════════════════════════════════
+   Impact Highlight
+   ══════════════════════════════════════════════ */
+.modal-impact {
+    background: rgba(100, 255, 218, 0.04);
+    border-left: 3px solid var(--secondary-color);
+    padding: 16px 20px;
+    border-radius: 0 10px 10px 0;
+}
+
+.modal-impact p {
+    font-style: italic;
 }

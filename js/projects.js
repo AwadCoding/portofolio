@@ -56,6 +56,49 @@
       .map((f) => `<li>${f}</li>`)
       .join("");
 
+    // Stats bar (numbers that prove impact)
+    let statsHTML = "";
+    if (project.modal.stats) {
+      const statsItems = project.modal.stats
+        .map((s) => `<div class="stat-item"><span class="stat-value">${s.value}</span><span class="stat-label">${s.label}</span></div>`)
+        .join("");
+      statsHTML = `<div class="modal-stats">${statsItems}</div>`;
+    }
+
+    // Problem section
+    let problemHTML = "";
+    if (project.modal.problem) {
+      problemHTML = `
+        <div class="modal-section">
+          <h4><i class="fas fa-exclamation-triangle"></i> The Problem</h4>
+          <p>${project.modal.problem}</p>
+        </div>
+      `;
+    }
+
+    // Achievements section
+    let achievementsHTML = "";
+    if (project.modal.achievements) {
+      const achItems = project.modal.achievements.map((a) => `<li>${a}</li>`).join("");
+      achievementsHTML = `
+        <div class="modal-section">
+          <h4><i class="fas fa-trophy"></i> Key Achievements</h4>
+          <ul>${achItems}</ul>
+        </div>
+      `;
+    }
+
+    // Impact section
+    let impactHTML = "";
+    if (project.modal.impact) {
+      impactHTML = `
+        <div class="modal-section modal-impact">
+          <h4><i class="fas fa-chart-line"></i> Impact</h4>
+          <p>${project.modal.impact}</p>
+        </div>
+      `;
+    }
+
     const modal = document.createElement("div");
     modal.className = "modal-overlay";
     modal.id = `modal-${project.id}`;
@@ -68,10 +111,12 @@
         </div>
         <div class="modal-body">
           <h3>${project.title}</h3>
+          ${statsHTML}
           <div class="modal-section">
             <h4><i class="fas fa-file-alt"></i> Overview</h4>
             <p>${project.modal.overview}</p>
           </div>
+          ${problemHTML}
           <div class="modal-section">
             <h4><i class="fas fa-star"></i> Key Features</h4>
             <ul>${featuresHTML}</ul>
@@ -80,6 +125,8 @@
             <h4><i class="fas fa-user-cog"></i> My Role</h4>
             <p>${project.modal.role}</p>
           </div>
+          ${achievementsHTML}
+          ${impactHTML}
           <ul class="project-tags">${allTagsHTML}</ul>
           <div class="modal-links">
             <a href="${project.liveUrl}" target="_blank" class="btn"><i class="fas fa-globe"></i> Live Demo</a>

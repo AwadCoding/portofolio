@@ -29,21 +29,26 @@ const HOME_DATA = {
     { label: "MySQL",      icon: "fas fa-database",    color: "#4479A1" },
     { label: "Git",        icon: "fab fa-git-alt",     color: "#F05032" },
     { label: "Sass",       icon: "fab fa-sass",        color: "#CC6699" },
+    { label: "REST APIs",  icon: "fas fa-plug",        color: "#64FFDA" },
+    { label: "Team Leadership",    icon: "fas fa-users",  color: "#FF6B6B" },
+    { label: "Project Management", icon: "fas fa-tasks",  color: "#4ECDC4" },
   ],
 
   // ── Tools Slider (Row 2) ──────────────────────────────────────────
   tools: [
-    { label: "Notion",    icon: "fas fa-book-open",          color: "#FFFFFF" },
-    { label: "Figma",     icon: "fab fa-figma",               color: "#A259FF" },
-    { label: "Slack",     icon: "fab fa-slack",               color: "#E01E5A" },
-    { label: "VS Code",   icon: "fas fa-code",                color: "#007ACC" },
-    { label: "GitHub",    icon: "fab fa-github",              color: "#FFFFFF" },
-    { label: "Stitch AI", icon: "fas fa-wand-magic-sparkles", color: "#64FFDA" },
+    { label: "Notion",         icon: "fas fa-clipboard-list",       color: "#FFFFFF" },
+    { label: "Figma",          icon: "fab fa-figma",                color: "#A259FF" },
+    { label: "Slack",          icon: "fab fa-slack",                color: "#E01E5A" },
+    { label: "VS Code",        icon: "fas fa-code",                 color: "#007ACC" },
+    { label: "GitHub",         icon: "fab fa-github",               color: "#FFFFFF" },
+    { label: "Claude AI",      icon: "fas fa-robot",                color: "#D4A574" },
+    { label: "Claude Design",  icon: "fas fa-palette",              color: "#A78BFA" },
+    { label: "Antigravity",    icon: "fas fa-atom",                 color: "#64FFDA" },
   ],
 
   // ── About Me Snippet ──────────────────────────────────
   about: {
-    text: "I'm a web developer with 3+ years of hands-on experience building real-world digital products. I specialize in front-end development (HTML, CSS, JavaScript, React) and have expanded into back-end development — working with PHP, Laravel, and SQL to deliver complete, database-driven systems. I've shipped full-stack projects for startups and student initiatives, always focusing on clean code, fast delivery, and results.",
+    text: "I'm a Front-End Developer transitioning into Full-Stack Development, with hands-on experience building real-world web systems used by ~300 actual users. I specialize in creating responsive, user-focused interfaces and translating real problems into practical digital solutions — with experience leading teams of 5–7 developers, organizing workflows, and delivering under tight deadlines.",
     ctaText: "Learn More",
     ctaHref: "pages/about.html",
   },

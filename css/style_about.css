@@ -52,6 +52,7 @@
    Shared Section Styles
    ══════════════════════════════════════════════ */
 .about-intro,
+.about-strengths,
 .skills,
 .tools,
 .education,
@@ -66,6 +67,7 @@
 }
 
 .about-intro h2,
+.about-strengths h2,
 .skills h2,
 .tools h2,
 .education h2,
@@ -83,6 +85,7 @@
 }
 
 .about-intro h2::after,
+.about-strengths h2::after,
 .skills h2::after,
 .tools h2::after,
 .education h2::after,
@@ -431,6 +434,7 @@
 .cta {
     text-align: center;
     margin-top: 40px;
+    margin-bottom: 60px;
     padding: 60px 20px;
     background: var(--accent-color);
     border-radius: 20px;
@@ -460,4 +464,55 @@
 
 .cta h2::after {
     display: none;
+}
+
+/* ══════════════════════════════════════════════
+   What I Bring — Strengths Grid
+   ══════════════════════════════════════════════ */
+.strengths-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+    margin-top: 20px;
+}
+
+.strength-item {
+    background: var(--accent-color);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px;
+    transition: all var(--transition-med);
+    position: relative;
+    overflow: hidden;
+}
+
+.strength-item:hover {
+    transform: translateY(-4px);
+    border-color: rgba(100, 255, 218, 0.25);
+    box-shadow: 0 8px 24px rgba(100, 255, 218, 0.08);
+}
+
+.strength-item i {
+    font-size: 1.8rem;
+    color: var(--secondary-color);
+    margin-bottom: 12px;
+    display: block;
+}
+
+.strength-item h3 {
+    font-size: 1.1rem;
+    color: var(--text-color);
+    margin-bottom: 8px;
+}
+
+.strength-item p {
+    color: var(--text-muted);
+    font-size: 0.92rem;
+    line-height: 1.6;
+}
+
+@media (max-width: 600px) {
+    .strengths-grid {
+        grid-template-columns: 1fr;
+    }
 }
