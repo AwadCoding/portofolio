@@ -64,7 +64,7 @@
 }
 
 #hero .image_hero .hero-img {
-    width: 320px;
+    width: 490px;
     border-radius: 30%;
     object-fit: cover;
     z-index: 1;
@@ -147,12 +147,12 @@
     }
 
     #hero .image_hero {
-        width: 200px;
-        height: 200px;
+        width: 300px;
+        height: 300px;
     }
 
     #hero .image_hero .hero-img {
-        width: 180px;
+        width: 250px;
     }
     .floating-icons .icon {
         width: 38px;
