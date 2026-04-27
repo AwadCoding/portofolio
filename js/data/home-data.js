@@ -55,8 +55,8 @@ const HOME_DATA = {
 
   // ── Contact Info ──────────────────────────────────────
   contact: {
-    email:    "mahmoud.awad.official@gmail.com",
-    phone:    "+20 10 30 656 171",
+    email:    "mahmoud.awad.offical@gmail.com",
+    phone:    "+20 15 579 171 38",
     location: "Cairo, Egypt",
     socials: [
       { icon: "fab fa-github",   url: "https://github.com/AwadCoding",                title: "GitHub"   },
