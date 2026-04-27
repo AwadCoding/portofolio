@@ -161,7 +161,8 @@
 
     .floating-icons .react {
         top: 5%;
-        left: 100%;
+        right: 2%;
+        left: auto;
     }
 
     .floating-icons .js {
@@ -177,6 +178,7 @@
     .floating-icons .php {
         bottom: 10%;
         right: 2%;
+        left: auto;
     }
 
     .floating-icons .sql {
